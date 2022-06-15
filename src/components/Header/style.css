@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #F56A79;
+    padding: 20px;
+    height: 100px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.right-contents-header{
+    display: flex;
+    gap: 10px;
+}
+
+.photo{
+    width: 200px;
+    height: 80px;
+    cursor: pointer;
+}
+
+.buttons-header-right{
+    display: flex;
+    gap: 10px;
+}
+
+#bR1, #bR2{
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffcb05;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.205) 0px 5px 15px;
+}
+
+#bR1{
+    font-size: 20px;
+}
+#bR2{
+    width: 110px;
+}
