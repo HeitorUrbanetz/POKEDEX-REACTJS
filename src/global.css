@@ -10,7 +10,7 @@
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color: #0DCAF0;
+    background-color: #212D40;
     position: fixed;
 }
 
@@ -23,36 +23,41 @@
     width: 70vw;
     height: 8000px;
     padding: 100px;
-    margin-top: 8%;
-    background-color: #fff;
-    overflow: auto;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin-top: 4.5%;
+    background-image: linear-gradient(180deg,#364156, #7D6B91);
+    overflow: scroll;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
+
+
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 7px;
   }
 
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
+::-webkit-scrollbar-track {
+
+}
   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #888;
-  }
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
   
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 
 
 .all-pokemons{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 #inputID {
@@ -65,10 +70,6 @@
     height: 50px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-
-
-
-
 
 @media only screen and (max-width: 604px) {
   *{

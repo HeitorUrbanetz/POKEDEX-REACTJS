@@ -3,10 +3,11 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: #F56A79;
-    padding: 20px;
-    height: 100px;
+    background-color: #364156; 
+    padding: 30px;
+    height: 140px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
 }
 
 .right-contents-header{
@@ -15,9 +16,10 @@
 }
 
 .photo{
-    width: 200px;
-    height: 80px;
+    width: 340px;
+    height: 100px;
     cursor: pointer;
+    margin-left: 50px;
 }
 
 .buttons-header-right{
@@ -27,17 +29,24 @@
 
 #bR1, #bR2{
     width: 100px;
-    border: none;
+    border: 1px solid #333;
     border-radius: 10px;
     background-color: #ffcb05;
-    color: #fff;
+    color: #364156;
     font-weight: bold;
     box-shadow: rgba(0, 0, 0, 0.205) 0px 5px 15px;
+    transition: all 0.3s ease-in;
+}
+
+#bR1:hover,#bR2:hover{
+    background-color: #F56A79;
+    color: #fff;
 }
 
 #bR1{
     font-size: 20px;
 }
+
 #bR2{
     width: 110px;
 }

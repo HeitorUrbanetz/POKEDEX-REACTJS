@@ -17,6 +17,7 @@ function App() {
 
   const [show, setShow] = useState(false);
 
+  const [error, setError] = useState(false);
 
 
   const getAllPokemon = async () => {
@@ -42,21 +43,21 @@ function App() {
 
   // search only one pokemon
   const getPokemon = async() => {
-    const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
-    const res = await axios.get(url);
 
     try {
-      const pokemonArray = [];
+        const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`
+        const res = await axios.get(url);
 
-      pokemonArray.push(res.data);
-      setPokemonData(pokemonArray);
-      setPokemonType(res.data.types[0].type.name);
-      console.log(res)
-      
+        const pokemonArray = [];
+
+        pokemonArray.push(res.data);
+        setPokemonData(pokemonArray);
+        setPokemonType(res.data.types[0].type.name);
+
+        setShow(true);
+
     } catch(e) {
-
-      console.log(e);
-
+      setShow(false);
     };
   };
 
@@ -69,15 +70,15 @@ function App() {
       setShow(false);
       return
     };
-    setShow(true);
 
-    getPokemon();
-    
+    getPokemon();    
   };
 
   const handleChange = (e) => {
     setPokemon(e.target.value.toLowerCase());
   };
+
+
 
   return(
     <div className='APP'>
@@ -92,7 +93,7 @@ function App() {
     <div className='content'>
       <div className='content-pokemons'>
           {
-            show === true && pokemonData.map((data) => <Pokemons data={data} type={pokemonType} />)
+            show === true && pokemonData.map((data,index) => <Pokemons data={data} key={index} type={pokemonType} />)
           }
 
           <div className='all-pokemons'>

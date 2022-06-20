@@ -3,6 +3,7 @@ import './style.css';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import logo from '../images/pokemon-logo-9.png';
 
 
 
@@ -26,6 +27,8 @@ const Header = ({handleChange, pokemonsList}) => {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
+      className: 'bg-black',
+      bodyClassName: "text-white"
       });
 
     const createPokemonObject = async (pokemon) => {
@@ -39,29 +42,22 @@ const Header = ({handleChange, pokemonsList}) => {
   };
 
 
-
   return (
     <div className='header'>
- 
       <a href='https://github.com/HeitorUrbanetz' rel="noreferrer" target="_blank">
-        <img src="https://logodownload.org/wp-content/uploads/2017/08/pokemon-logo-8.png" alt="pokemon"  className="photo"/>
+        <img src={logo} alt="pokemon"  className="photo"/>
       </a>
       <div className='right-contents-header'>
-        
-        <input spellCheck="false" id="inputID" placeholder="Search your pokemon!" type="text" onChange={handleChange}/>
-        
+        <input autoComplete="off" spellCheck="false" id="inputID" placeholder="Search your pokemon!" type="text" onChange={handleChange}/>
         <ToastContainer />
-
         <div className='buttons-header-right'>
             <button id="bR1" type="submit">SEARCH</button>
-           
             <button  id="bR2" onClick={getAllPokemon}>LOAD MORE!</button>
         </div>
 
       </div>
-      
     </div>
   )
 }
 
-export default Header
+export default Header;

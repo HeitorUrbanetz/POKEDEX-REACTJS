@@ -7,6 +7,8 @@
     border: 1px solid #333;
     border-radius: 10px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    background-color: #364156;
+    color: #fff;
 }
 
 .pokemom-thumb-container:hover{
@@ -18,25 +20,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-width: 300px;
+    width: 300px;
+    height: 350px;
     border-radius: 10px;
     min-height: 400px;
-    background-color: #fff;
+    background-color: #364156;
     margin: 20px;
+    position: relative;
 }
 
 .favourite-icon {
-    transform: translate(135px, -10px);
-    border: 2px solid #F56A79;
+    position: absolute;
     border-radius: 50%;
+    top: 0px;
+    right: 0px;
 }
 
 .status-pokemon-mini{
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .progress-bars-mini h3{
-    font-size: 10px;
+    font-size: 20px;
 }
 
 .progress-bars-mini{
@@ -50,6 +55,19 @@
     font-weight: bold;
     border-radius: 8px;
     color: #fff;
+    height: 40px;
+    font-size: 20px;
+}
+
+.thumb-id{
+    font-size:20px;
+}
+
+.pokemons-names{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 

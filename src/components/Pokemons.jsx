@@ -11,7 +11,6 @@ const Pokemons = ({data, type}) => {
 
   useEffect(() => {
     changeBackgroundColor();
-    console.log(data)
   }, [type])
 
   const getAbilities = () => {

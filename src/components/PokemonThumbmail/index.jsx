@@ -28,8 +28,9 @@ const PokemonThumbmail = ({data, id, name, image, type}) => {
         return;
       };
 
-      Cookies.remove(name);
-  }, [favorite])
+      Cookies.remove(name); // remove all false
+  }, [favorite]);
+
 
   return (
     <div>
@@ -43,19 +44,24 @@ const PokemonThumbmail = ({data, id, name, image, type}) => {
                       }
                       </div>    
 
-            <div className='thumb-id'><small>#{id >= 10 ? '' : '0'}{id}</small></div>
 
-            <img src={image} alt={name}/>
+            <img src={image} alt={name} style={{transform: 'scale(1.5)'}} />
 
                 <div className='thumb-details'>
-                    <h1>{name}</h1>
+
+                  <div className='pokemons-names'>
+                    
+                    <h1>{name[0].toUpperCase() + name.substring(1)}</h1>
+                    <div className='thumb-id'><span>#{id >= 10 ? '' : '0'}{id}</span></div>
+
+                  </div>
                     <p>Type: <span id="typePoke">
                       {type}
                     {type === 'grass' ? <GiHighGrass style={{ marginLeft: '5px', marginBottom: '5px', color: 'green', border: '1px solid green', borderRadius: '50%'}} /> : ''}
                     {type === 'fire' ? <ImFire  style={{ marginLeft: '5px', marginBottom: '5px', color: '#F56A79', border: '1px solid #F56A79', borderRadius: '50%'}}/> : ''}
                     {type === 'water' ? <IoWater  style={{ marginLeft: '5px', marginBottom: '5px', color: 'blue', border: '1px solid blue', borderRadius: '50%'}}/> : ''}
                     {type === 'bug' ? <AiFillBug  style={{ marginLeft: '5px', marginBottom: '5px', color: 'orange', border: '1px solid orange', borderRadius: '50%'}}/> : ''}
-                    {type === 'normal' ? <MdPets  style={{ marginLeft: '5px', marginBottom: '5px', color: 'black', border: '1px solid black', borderRadius: '50%'}}/> : ''}
+                    {type === 'normal' ? <MdPets  style={{ marginLeft: '5px', marginBottom: '5px', color: 'white', border: '1px solid white', borderRadius: '50%'}}/> : ''}
                     {type === 'electric' ? <BsLightningCharge  style={{ marginLeft: '5px', marginBottom: '5px', color: '#fcc419', border: '1px solid #fcc419', borderRadius: '50%'}}/> : ''}
                     {type === 'poison' ? <GiPoisonBottle  style={{ marginLeft: '5px', marginBottom: '5px', color: 'purple', border: '1px solid purple', borderRadius: '50%'}}/> : ''}
                     {type === 'ground' ? <GiGroundbreaker  style={{ marginLeft: '5px', marginBottom: '5px', color: 'brown', border: '1px solid brown', borderRadius: '50%'}}/> : ''}
